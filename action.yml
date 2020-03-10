@@ -1,0 +1,14 @@
+name: 'Get active github deployment'
+description: 'Get active github deployment for current branch'
+inputs:
+  token:
+    required: true
+    description: 'Github Token (use ${{ secrets.GITHUB_TOKEN }})'
+outputs:
+  url:
+    description: 'URL of the deployment'
+  deployment_id:
+    description: 'ID of the deployment'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
